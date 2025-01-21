@@ -230,14 +230,15 @@ const TableList: React.FC = () => {
         >
           修改
         </a>,
-        record.status === 0 ? <a
-          key="onLine"
-          onClick={() => {
+        record.status === 0 ? <Button
+            type="link"
+            key="onLine"
+            onClick={() => {
             handleOnline(record);
           }}
         >
           发布
-        </a> : null,
+        </Button> : null,
         record.status === 1 ? <Button
           type="text"
           key="offLine"
